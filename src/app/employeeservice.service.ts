@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-
+import { HttpModule, Http } from '@angular/Http';
 @Injectable()
 export class EmployeeserviceService {
 
-  constructor() { }
+  constructor(private http:Http) { }
   getEmployees() {
-  return [{"name" :"mantu" ,id:"1", "age":25},
-             {"name" :"biswa" ,id:"2", "age":24},
-             {"name" :"siba" ,id:"3", "age":23}];
+  return [{
+    "_id": "1",
+    "username": "subhendu",
+    "email": "subhendu@gmail.com",
+    "password": "subhendu"
+},{
+    "_id": "2",
+    "username": "vikash",
+    "email": "vikash@gmail.com",
+    "password": "vikash"
+}];
 }
 
 }
